@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-blue: hsl(229, 23%, 23%);
+    --Dark-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Kumbh Sans', sans-serif;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    overflow: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Dark-cyan);
+    border: 1px solid #000;
+    overflow:hidden;
+    position: relative;
+}
+
+body > img[src*="top"] {
+    position: absolute;
+    top: -27rem;
+    left: -19rem;
+    z-index: 1;
+}
+
+body > img[src*="bottom"] {
+    position: absolute;
+    right: -19rem;
+    bottom: -30rem;
+    z-index: 1;
+}
+
+.main {
+    position: relative;
+    z-index: 2;
+    width: 23rem;
+    /* border: 1px solid #000; */
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.main .img {
+    height: 10rem;
+    /* border: 1px solid #000 */
+}
+
+.main .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main .name {
+    text-align: center;
+    padding: 5rem 0 2rem 0 ;
+    position: relative;
+}
+
+.main .name img {
+    position: absolute;
+    border-radius: 50%;
+    top: -4.5rem;
+    width:8.5rem;
+    border: 0.4rem solid #fff;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main .name h1 {
+    font-size: 1.5rem;
+    color: var(--Very-dark-blue);
+}
+
+.main .name span {
+    color: var(--Dark-gray);
+    font-weight: 400;
+}
+
+.main .name p {
+    color: var(--Dark-gray);
+    margin-top: 0.7rem;
+    font-size: 1.2rem;
+}
+
+.main .footer ul {
+    display: flex;
+    text-align: center;
+    /* border: 1px solid #000; */
+    width: 100%;
+    justify-content: space-around;
+}
+.main .footer ul li {
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    color: var(--Dark-blue);
+}
+.main .footer ul h2 {
+    padding-bottom: .3rem;
+    letter-spacing: 0;
+    font-size: 1.3rem;
+    color: var(--Very-dark-blue);
+}
+
+
+.main .footer {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+@media screen and (max-width:568px) {
+    html {
+        font-size: 90%;
+    }
+
+    body > img[src*="top"] {
+        position: absolute;
+        top: -37rem;
+        left: -51rem;
+        z-index: 1;
+    }
+    
+    body > img[src*="bottom"] {
+        position: absolute;
+        right: -50rem;
+        bottom: -39rem;
+        z-index: 1;
+    }
+}
